@@ -6,14 +6,17 @@ function yearOfBirth(age){
 }
 
 function whoAmI(name, age) {
-    try {
-        var yob = yearOfBirth(age);
+    if (!name || !age) {
+        throw new Error("Arguement not valid");
     }
-    catch(error) {
-        console.error("Argument not valid");
-    }
+    var yob = yearOfBirth(age);
     console.log("Hi, my name is " + name + " and I\'m " + age + " years old");
     console.log("I was born in " + yob);
 };
 
-whoAmI('Chris', -5);
+try {
+whoAmI();
+}
+catch(error) {
+    console.log(error);
+}
