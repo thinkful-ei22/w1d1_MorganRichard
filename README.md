@@ -24,3 +24,5 @@ git checkout -- <filename>
 git status - working tree should be clean
 Make a different change, save, commit, push
 Rinse and repeat a few times until you're comfortable with the process
+
+I've added some stuff
