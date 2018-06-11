@@ -66,5 +66,41 @@ function daysInMonth (month, leapYear=false) {
         default: throw new Error('Must provide a valid month.');
     }
 }
+try {
+daysInMonth('Fsbruary');
+}
+catch (error) {
+    console.log(error);
+}
 
-daysInMonth('february');
+// const randomNo = Math.floor(Math.random() * 3) + 1;
+function rps(input) {
+    let randomNo = Math.floor(Math.random() * 3) + 1;
+    if (input < 1 || input > 3) {
+        throw new Error("Invalid Input");
+    }
+    if (input == randomNo) {
+        console.log("It is a tie");
+    } else if (input > randomNo) {
+        if (input == 3 && randomNo ==1) {
+            console.log("Lose");
+        }
+        else {
+            console.log("Win");
+        }
+    }
+    else {
+        if (input == 1 && randomNo == 3) {
+            console.log("Win");
+        }
+        else {
+            console.log("Lose");
+        }
+    }
+}
+try {
+rps(3);
+}
+catch (error) {
+    console.log(error);
+}
